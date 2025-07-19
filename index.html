@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自适应网页</title>
+    <style>
+        /* 重置样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        /* 容器样式 */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* 头部样式 */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        /* 导航栏 */
+        nav {
+            background-color: #34495e;
+            padding: 10px 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        /* 主要内容区 */
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .main-article {
+            flex: 70%;
+            padding: 20px;
+            background-color: white;
+            margin-bottom: 20px;
+        }
+        
+        .sidebar {
+            flex: 30%;
+            padding: 20px;
+            background-color: #ecf0f1;
+            margin-bottom: 20px;
+        }
+        
+        /* 页脚 */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+        
+        /* 响应式设计 - 当屏幕宽度小于768px时 */
+        @media screen and (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 5px 0;
+            }
+            
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .main-article, .sidebar {
+                flex: 100%;
+            }
+        }
+        
+        /* 响应式设计 - 当屏幕宽度小于480px时 */
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 24px;
+            }
+            
+            .main-article, .sidebar {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>我的自适应网站</h1>
+            <p>无论使用什么设备访问，都能获得良好的体验</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">服务</a></li>
+                <li><a href="#">产品</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="main-content">
+            <article class="main-article">
+                <h2>欢迎来到我们的网站</h2>
+                <p>这是一个自适应网页设计的示例。无论您是在桌面电脑、平板电脑还是手机上浏览此页面，内容都会自动调整以适应您的屏幕尺寸。</p>
+                <p>自适应网页设计(Responsive Web Design)是一种网页设计方法，使网站能够在各种设备上以合适的布局显示，提供最佳的视觉体验。</p>
+                <p>这种设计方法使用灵活的网格布局、灵活的图片和媒体查询来适应不同的屏幕尺寸。</p>
+            </article>
+            
+            <aside class="sidebar">
+                <h3>侧边栏</h3>
+                <p>这里是侧边栏内容。在宽屏幕上，它会显示在主要内容旁边；在窄屏幕上，它会显示在主要内容下方。</p>
+                <ul>
+                    <li>响应式设计</li>
+                    <li>移动优先</li>
+                    <li>用户体验</li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 我的自适应网站. 保留所有权利。</p>
+        </div>
+    </footer>
+</body>
+</html>
